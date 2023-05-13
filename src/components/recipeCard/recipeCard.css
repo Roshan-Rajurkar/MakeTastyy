@@ -32,6 +32,7 @@
     cursor: pointer;
     color: #fff;
     border-radius: 7px;
+    /* width: 50%; */
 }
 
 .recipe_more_details {

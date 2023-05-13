@@ -21,6 +21,7 @@ const RecipeCard = ({ recipe }) => {
             </h3>
             <button className='recipe_ingredients' onClick={handleOpen}>Ingredients</button>
             <button onClick={() => window.open(recipe.url)} className='recipe_more_details'>See more details</button>
+            <button onClick={() => window.open(recipe.url)} className='recipe_more_details'>See more details</button>
 
 
             {/* dialog Box using the materialUI */}
@@ -29,7 +30,7 @@ const RecipeCard = ({ recipe }) => {
                 <DialogContent>
                     <DialogContentText>
                         {recipe.ingredients.map((ingredient, index) => (
-                            <div key={index}>{index+1}. {ingredient.text}</div>
+                            <div key={index}>{index + 1}. {ingredient.text}</div>
                         ))}
                     </DialogContentText>
                 </DialogContent>

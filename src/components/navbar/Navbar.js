@@ -15,8 +15,8 @@ import { BsSearch } from 'react-icons/bs'
 
 // this is the final Key
 // https://api.edamam.com/search?q=burger&app_id=474077ac&app_key=2e19581b08ce60694d9e7a01eb59f595
-const APP_ID = "474077ac";
-const API_KEY = "2e19581b08ce60694d9e7a01eb59f595";
+// const APP_ID = "474077ac";
+// const API_KEY = "2e19581b08ce60694d9e7a01eb59f595";
 
 const Navbar = ({ onRecipeListUpdate }) => {
     const [timer, setTimer] = useState(null)
@@ -25,13 +25,16 @@ const Navbar = ({ onRecipeListUpdate }) => {
 
     const fetchRecipes = async () => {
         try {
-            const response = await fetch(`https://api.edamam.com/search?q=${searchQuery}&app_id=${APP_ID}&app_key=${API_KEY}`);
+            const response = await fetch(`https://api.edamam.com/search?q=${searchQuery}&app_id=${process.env.REACT_APP_EDAMAM_APP_ID}&app_key=${process.env.REACT_APP_EDAMAM_API_KEY}`);
             const data = await response.json();
             onRecipeListUpdate(data.hits);
         } catch (error) {
             console.error('API Error:', error);
         }
     };
+
+    
+    
 
     useEffect(() => {
         clearTimeout(timer)
