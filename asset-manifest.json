@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/MakeTastyy/static/css/main.a835c467.css",
-    "main.js": "/MakeTastyy/static/js/main.36e961e4.js",
+    "main.css": "/MakeTastyy/static/css/main.e4c0ae53.css",
+    "main.js": "/MakeTastyy/static/js/main.4ba4901b.js",
     "static/media/LOGO.png": "/MakeTastyy/static/media/LOGO.84afcc068e0356aaeb2d.png",
     "index.html": "/MakeTastyy/index.html",
-    "main.a835c467.css.map": "/MakeTastyy/static/css/main.a835c467.css.map",
-    "main.36e961e4.js.map": "/MakeTastyy/static/js/main.36e961e4.js.map"
+    "main.e4c0ae53.css.map": "/MakeTastyy/static/css/main.e4c0ae53.css.map",
+    "main.4ba4901b.js.map": "/MakeTastyy/static/js/main.4ba4901b.js.map"
   },
   "entrypoints": [
-    "static/css/main.a835c467.css",
-    "static/js/main.36e961e4.js"
+    "static/css/main.e4c0ae53.css",
+    "static/js/main.4ba4901b.js"
   ]
 }
