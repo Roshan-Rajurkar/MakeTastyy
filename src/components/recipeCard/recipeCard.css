@@ -52,3 +52,10 @@
     border: 1.5px solid rgb(121, 6, 6);
     color: #000;
 }
+
+
+.recipe_car_buttons{
+    display: flex;
+    justify-content: space-around;
+}
+

@@ -1,0 +1,97 @@
+.footer {
+    background-color: #000000;
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  
+  .logo {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .footer-text {
+    color: #666;
+    font-size: 14px;
+
+  }
+  
+  .footer-right {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .social-icon {
+    color: #666;
+    font-size: 20px;
+  }
+  .social-icon:hover {
+    color: #363535;
+  }
+  
+  @media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column;
+    }
+  
+    .footer-right {
+      margin-top: 10px;
+    }
+  }
+  
+
+  .feedback-form {
+    width: 50%;
+    margin: 10px auto;
+  }
+  
+  .feedback-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .feedback-form input,
+  .feedback-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none;
+  }
+  
+  .feedback-form textarea {
+    height: 50px;
+  }
+  
+  .feedback-form button {
+    padding: 10px 20px;
+    background-color: #9a9a9a;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .feedback-form button:hover {
+    background-color: #3c3c3c;
+  }
+
+  .send_feedback{
+    display: flex;
+    align-items: center;
+  }
+
+  .send_icon{
+    font-size: 16px;
+  }

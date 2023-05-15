@@ -5,32 +5,25 @@ import Navbar from './components/navbar/Navbar';
 import RecipeList from './components/recipeListContainer/RecipeList';
 import NoRecipeFound from './components/noRecipe/NoRecipeFound'
 import Home from "./pages/Home";
+import Footer from "./components/footer/Footer";
 
 function App() {
-
-  // this recipes for the search
-  const [recipes, setRecipes] = useState([])
-
-  // popular Recipes
-  const [popularRecipes, setPopularRecipes] = useState([])
-
-  // trending recipes
-  const [trendingRecipes, setTrendingRecipes] = useState([])
-
+  const [recipes, setRecipes] = useState([]);
+  const [popularRecipes, setPopularRecipes] = useState([]);
+  const [isLoading, setIsLoading] = useState(true); // Add isLoading state
 
   const handleRecipeListUpdate = (updatedRecipeList) => {
     setRecipes(updatedRecipeList);
   };
 
   useEffect(() => {
-    console.log(recipes);
-
     const loadLatest = async () => {
       try {
-        const response = await axios.get(`https://api.edamam.com/search?q=query&app_id=${process.env.REACT_APP_EDAMAM_APP_ID}&app_key=${process.env.REACT_APP_EDAMAM_API_KEY}&sort=r`);
-        const newRes = await axios.get(`https://api.edamam.com/search?q=query&app_id=${process.env.REACT_APP_EDAMAM_APP_ID}&app_key=${process.env.REACT_APP_EDAMAM_API_KEY}&sort=da`);
-        console.log("Popular", response.data)
-        console.log("trending", newRes.data)
+        const response = await fetch(`https://api.edamam.com/search?q=query&app_id=${process.env.REACT_APP_EDAMAM_APP_ID}&app_key=${process.env.REACT_APP_EDAMAM_API_KEY}&sort=r`);
+        const data = await response.json();
+        const updatedList = data.hits.map(hit => hit.recipe)
+        setPopularRecipes(updatedList)
+        setIsLoading(false); // Set isLoading to false when recipes are loaded
       }
       catch (err) {
         console.log(err)
@@ -41,14 +34,24 @@ function App() {
 
   }, [recipes]);
 
-
-
   return (
     <>
-      <h1>Left AT fetching Popular and trending List of Recipes</h1>
       <Navbar onRecipeListUpdate={handleRecipeListUpdate} />
-      {/* <RecipeList recipeList={recipes.length && recipes} /> */}
-      {/* <Home /> */}
+      <div className="main_content">
+        {isLoading ? ( // Display loading if isLoading is true
+          <NoRecipeFound />
+        ) : (
+          <>
+            {/* another condition if recipe present  */}
+            {recipes.length > 0 ? (
+              <RecipeList recipeList={recipes} />
+            ) : (
+              <Home popularRecipeList={popularRecipes} />
+            )}
+          </>
+        )}
+      </div>
+      <Footer />
     </>
   );
 }

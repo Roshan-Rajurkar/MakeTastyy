@@ -1,0 +1,30 @@
+.home_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* background-color: red; */
+}
+
+.home_heading {
+    font-size: 20px;
+    color: #333;
+    margin: 20px 0px;
+  }
+
+.home_popular_recipes{
+    width: 90%;
+    margin: 0 auto;
+    /* background-color: green; */
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card_recipe{
+    text-align: center;
+    width: 200px;
+    height: 200px;
+    border: 2px solid yellow;
+}
