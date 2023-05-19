@@ -68,10 +68,12 @@
     border: 1px solid #ccc;
     border-radius: 5px;
     resize: none;
+    font-family: Arial, Helvetica, sans-serif;
   }
   
   .feedback-form textarea {
-    height: 50px;
+    height: 70px;
+    font-family: Arial, Helvetica, sans-serif;
   }
   
   .feedback-form button {
@@ -94,4 +96,10 @@
 
   .send_icon{
     font-size: 16px;
+  }
+
+
+  .feedback-form input:focus,
+  .feedback-form textarea:focus{
+    outline: none;
   }

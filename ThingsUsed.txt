@@ -1,3 +1,10 @@
 Edamam API for Recipes : https://developer.edamam.com/admin/applications/1409623407632?service_id=2555417725632
 Email : roshanrajurkar50@gmail.com
 Password : Roshan@123
+
+to update github
+
+1.
+npm run build
+2.
+npm run deploy
