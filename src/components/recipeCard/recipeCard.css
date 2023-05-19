@@ -1,4 +1,3 @@
-
 .recipe_card {
     display: flex;
     flex-direction: column;
@@ -54,8 +53,41 @@
 }
 
 
-.recipe_car_buttons{
+.recipe_car_buttons {
     display: flex;
     justify-content: space-around;
 }
 
+.share_buttons {
+    display: flex;
+    align-items: center;
+}
+
+.share__buttons {
+    margin-top: 10px;
+}
+
+.share__button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    border: 1.5px solid transparent;
+    margin-top: 10px;
+}
+
+
+.share__icon {
+    font-size: 22px;
+    color: green;
+}
+
+.button__text {
+    font-size: 14px;
+}
+
+.share_icons_ig {
+    color: #e917b1;
+}

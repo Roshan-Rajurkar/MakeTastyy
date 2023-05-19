@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Button, Dialog, DialogTitle, DialogContent, DialogActions, DialogContentText } from '@mui/material';
 import './recipeCard.css';
+import { BsWhatsapp } from 'react-icons/bs';
+import { FaInstagram } from 'react-icons/fa';
 
 const RecipeCard = ({ recipe }) => {
   const [open, setOpen] = useState(false);
@@ -39,6 +41,24 @@ const RecipeCard = ({ recipe }) => {
     fetchVideo();
   }, [recipe.label, videoId]);
 
+
+  const handleShare = (platform) => {
+    const ingredientsText = recipe.ingredients
+      .map((ingredient, index) => `${index + 1}. ${ingredient.text}`)
+      .join('\n');
+
+    switch (platform) {
+      case 'whatsapp':
+        window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(ingredientsText)}`);
+        break;
+      case 'instagram':
+        window.open(`https://www.instagram.com/?text=${encodeURIComponent(ingredientsText)}`);
+        break;
+      default:
+        break;
+    }
+  };
+
   return (
     <div className='recipe_card'>
       <img src={recipe.image} alt="recipe_image" className='recipe_cover_img' />
@@ -65,8 +85,27 @@ const RecipeCard = ({ recipe }) => {
               {recipe.ingredients.map((ingredient, index) => (
                 <div key={index}>{index + 1}. {ingredient.text}</div>
               ))}
+
+              <div className='share__buttons'>
+                <button
+                  onClick={() => handleShare('whatsapp')}
+                  className='share__button'
+                >
+                  <BsWhatsapp className='share__icon' />
+                  <span className='button__text'>share on whatsapp</span>
+                </button>
+                <button
+                  onClick={() => handleShare('instagram')}
+                  className='share__button'
+                >
+                  <FaInstagram className='share__icon share_icons_ig' />
+                  <span className='button__text'>share on instagram</span>
+                </button>
+              </div>
+
             </DialogContentText>
           ) : (
+            // cooking video
             <div style={{ display: 'flex', justifyContent: 'center' }}>
               <iframe
                 title="Recipe Video"
@@ -83,7 +122,7 @@ const RecipeCard = ({ recipe }) => {
           <Button onClick={handleClose}>Close</Button>
         </DialogActions>
       </Dialog>
-    </div>
+    </div >
   );
 };
 
