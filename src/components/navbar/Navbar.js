@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import './navbar.css'
 import LOGO from '../../assets/LOGO.png'
 import { BsSearch } from 'react-icons/bs'
+import { CgUserlane } from 'react-icons/cg'
 
 
 // Edamam API call 
@@ -33,8 +34,8 @@ const Navbar = ({ onRecipeListUpdate }) => {
         }
     };
 
-    
-    
+
+
 
     useEffect(() => {
         clearTimeout(timer)
@@ -69,9 +70,9 @@ const Navbar = ({ onRecipeListUpdate }) => {
                     <input type="text" name="search" className='header_search_bar' placeholder='search here...' onChange={onTextChange} />
                 </div>
 
-                {/* <div>
-                    Here I am Going to add my data
-                </div> */}
+                <div className='portfolio'>
+                    <a href="https://roshan-rajurkar.github.io/R_R_/" target='_blank'><CgUserlane className='portfolio__link' /></a>
+                </div>
             </div>
 
         </div>

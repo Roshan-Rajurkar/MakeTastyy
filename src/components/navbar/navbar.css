@@ -75,6 +75,18 @@ h1 {
     font-size: 18px;
 }
 
+.portfolio>a {
+    text-decoration: none;
+}
+
+.portfolio__link {
+    font-size: 22px;
+    padding: 5px;
+    color: white;
+    border: 2px solid white;
+    border-radius: 5px;
+}
+
 @media screen and (max-width: 600px) {
     .header {
         padding: 0px 6px;
