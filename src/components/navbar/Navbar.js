@@ -71,7 +71,7 @@ const Navbar = ({ onRecipeListUpdate }) => {
                 </div>
 
                 <div className='portfolio'>
-                    <a href="https://roshan-rajurkar.github.io/R_R_/" target='_blank'><CgUserlane className='portfolio__link' /></a>
+                    <a href="https://myportfolio-add21.web.app/" target='_blank'><CgUserlane className='portfolio__link' /></a>
                 </div>
             </div>
 

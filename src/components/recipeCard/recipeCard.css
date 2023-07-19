@@ -36,7 +36,9 @@
 
 .recipe_more_details {
     background-color: rgb(121, 6, 6);
-
+    display: flex;
+    align-items: center;
+    gap: 3px;
 }
 
 .recipe_ingredients:hover,
@@ -49,7 +51,7 @@
 
 .recipe_more_details:hover {
     border: 1.5px solid rgb(121, 6, 6);
-    color: #000;
+    color: #942323;
 }
 
 

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Button, Dialog, DialogTitle, DialogContent, DialogActions, DialogContentText } from '@mui/material';
 import './recipeCard.css';
-import { BsWhatsapp } from 'react-icons/bs';
+import { BsWhatsapp, BsPlayBtnFill } from 'react-icons/bs';
 import { FaInstagram } from 'react-icons/fa';
 
 const RecipeCard = ({ recipe }) => {
@@ -71,7 +71,7 @@ const RecipeCard = ({ recipe }) => {
         </button>
         {videoId && (
           <button className='recipe_more_details' onClick={() => handleOpen('video')}>
-            Get Cooking
+            watch <BsPlayBtnFill />
           </button>
         )}
       </div>
