@@ -46,7 +46,7 @@ const Footer = () => {
                     <p className="footer-text">© 2023 MakeTastyy. All rights reserved.</p>
                 </div>
                 <div className="footer-right">
-                    <a href="https://roshan-rajurkar.github.io/R_R_/" target="_blank" rel='noreferrer' className="social-icon"><FaExternalLinkAlt /></a>
+                    <a href="https://roshanrajurkar.online/" target="_blank" rel='noreferrer' className="social-icon"><FaExternalLinkAlt /></a>
                     <a href="https://www.instagram.com/roshan_rajurkar__/" target="_blank" rel='noreferrer' className="social-icon"><FaInstagram /></a>
                     <a href="https://github.com/Roshan-Rajurkar" target="_blank" rel='noreferrer' className="social-icon"><FaGithub /></a>
                     <a href="https://www.linkedin.com/in/roshan-rajurkar-3400a4206/" target="_blank" rel='noreferrer' className="social-icon"><FaLinkedin /></a>
